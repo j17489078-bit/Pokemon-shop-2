@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Checkout</h1>
+
+<form id="checkoutForm">
+    <h2>Shipping Address</h2>
+    <input type="text" id="name" placeholder="Full Name" required><br>
+    <input type="text" id="street" placeholder="Street Address" required><br>
+    <input type="text" id="city" placeholder="City" required><br>
+    <input type="text" id="zip" placeholder="ZIP Code" required><br>
+    <input type="text" id="country" placeholder="Country" required><br>
+
+    <h2>Payment Method</h2>
+    <select id="payment" required>
+        <option value="">Select a payment method</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="PayPal">PayPal</option>
+        <option value="Gift Card">Gift Card</option>
+    </select><br><br>
+
+    <button type="button" class="checkout-btn" onclick="goToPayment()">Confirm Payment</button>
+    <button type="button" class="checkout-btn" onclick="goBack()">Back to Cart</button>
+</form>
+
+<script src="script.js"></script>
+<script>
+function goToPayment(){
+    const name = document.getElementById("name").value.trim();
+    const street = document.getElementById("street").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const zip = document.getElementById("zip").value.trim();
+    const country = document.getElementById("country").value.trim();
+    const payment = document.getElementById("payment").value;
+
+    if(!name || !street || !city || !zip || !country || !payment){
+        alert("Please fill in all fields and select a payment method!");
+        return;
+    }
+
+    localStorage.setItem("shippingInfo", JSON.stringify({name, street, city, zip, country, payment}));
+    window.location.href = "payment.html";
+}
+
+function goBack(){
+    window.location.href = "cart.html";
+}
+</script>
+
+</body>
+</html>

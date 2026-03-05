@@ -1,0 +1,64 @@
+body {
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    background: url('https://i.imgur.com/6mR3Kwe.png') repeat;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+h1 { color: #FF0000; text-shadow: 2px 2px #FFD700; }
+h2 { color: #FFCC00; text-shadow: 1px 1px #FF0000; }
+
+input, select {
+    margin: 5px;
+    padding: 8px;
+    width: 200px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', monospace;
+}
+
+button, .checkout-btn {
+    background: #FF0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+button:hover, .checkout-btn:hover {
+    background: #FFD700;
+    color: #FF0000;
+    transform: scale(1.05);
+}
+
+#shop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fdf6e3;
+    padding: 10px;
+    border-radius: 15px;
+    width: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    border: 3px solid #FFCC00;
+    transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #FFCC00;
+}

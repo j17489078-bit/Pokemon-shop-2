@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop - Pokemon Card Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Shop</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sell.html">Sell</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<input type="text" id="search" placeholder="Search cards..." onkeyup="searchCards()">
+
+<div class="shop-container" id="shop">
+
+    <div class="card" data-name="Charizard">
+        <img src="https://images.pokemontcg.io/base1/4.png">
+        <h3>Charizard</h3>
+        <p>$300</p>
+        <button onclick="addToCart('Charizard',300)">Add to Cart</button>
+    </div>
+
+    <div class="card" data-name="Pikachu">
+        <img src="https://images.pokemontcg.io/base1/58.png">
+        <h3>Pikachu</h3>
+        <p>$40</p>
+        <button onclick="addToCart('Pikachu',40)">Add to Cart</button>
+    </div>
+
+    <div class="card" data-name="Booster Pack">
+        <img src="https://images.pokemontcg.io/base1/pack.png">
+        <h3>Base Set Booster Pack</h3>
+        <p>$200</p>
+        <button onclick="addToCart('Booster Pack',200)">Add to Cart</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
